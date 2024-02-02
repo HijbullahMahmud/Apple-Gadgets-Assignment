@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorRes {
-  static const Color primaryColor = Color(0xff159A9F);
+  static const Color primaryColor = Colors.blue;
   static const Color canvasColor = Color(0xffF8F8F8);
   static const Color gradientColorStart = Color(0xFF1096A1);
   static const Color gradientColorEnd = Color(0xFF32A782);

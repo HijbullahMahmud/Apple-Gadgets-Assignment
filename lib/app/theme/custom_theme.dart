@@ -5,11 +5,34 @@ import '../../utils/color_res.dart';
 
 class CustomTheme {
   static final ThemeData baseLight = ThemeData.light();
+
   static final lightTheme = baseLight.copyWith(
-    textTheme: _lightTextTheme(baseLight.textTheme),
-    primaryColor: ColorRes.primaryColor,
-    canvasColor: ColorRes.canvasColor,
-  );
+      textTheme: _lightTextTheme(baseLight.textTheme),
+      primaryColor: ColorRes.primaryColor,
+      canvasColor: ColorRes.canvasColor,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+      useMaterial3: true,
+      appBarTheme: AppBarTheme(
+          color: ColorRes.primaryColor,
+          iconTheme: const IconThemeData(color: Colors.white),
+          titleTextStyle: TextStyle(
+            fontFamily: GoogleFonts.poppins().fontFamily,
+            fontSize: 16,
+            color: Colors.white,
+            fontWeight: FontWeight.normal,
+          )),
+      colorScheme: const ColorScheme.light(
+        primary: ColorRes.primaryColor,
+        secondary: Colors.deepOrange,
+        surface: Colors.white,
+        background: Colors.white,
+        error: Colors.red,
+        onPrimary: Colors.white,
+        onSecondary: Colors.black,
+        onSurface: Colors.black,
+        onBackground: Colors.black,
+        onError: Colors.white,
+      ));
 
   static TextTheme _lightTextTheme(TextTheme base) {
     return base.copyWith(
@@ -31,7 +54,6 @@ class CustomTheme {
         color: Colors.black,
         fontWeight: FontWeight.normal,
       ),
-      
     );
   }
 }

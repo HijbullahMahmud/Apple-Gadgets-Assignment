@@ -1,3 +1,4 @@
+import 'package:apple_gadgets_assignment/app/bindings/initial_bindings.dart';
 import 'package:apple_gadgets_assignment/app/routes.dart';
 import 'package:apple_gadgets_assignment/app/theme/custom_theme.dart';
 import 'package:apple_gadgets_assignment/utils/strings.dart';
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: Strings.appName,
+      debugShowCheckedModeBanner: false,
+      initialBinding: InitialBindings(),
       theme: CustomTheme.lightTheme,
       routes: Routes.list,
       initialRoute: Routes.splashScreen,
