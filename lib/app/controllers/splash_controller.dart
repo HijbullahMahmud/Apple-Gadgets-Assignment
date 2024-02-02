@@ -1,5 +1,6 @@
 import 'package:apple_gadgets_assignment/app/routes.dart';
 import 'package:apple_gadgets_assignment/services/local_db_service.dart';
+import 'package:apple_gadgets_assignment/utils/helper.dart';
 import 'package:apple_gadgets_assignment/utils/keys.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +21,7 @@ class SplashController extends GetxController {
         Get.offAllNamed(Routes.authScreen);
       });
     } else {
+      printLog("token: $token");
       Future.delayed(const Duration(seconds: 3), () {
         Get.offAllNamed(Routes.profileScreen);
       });

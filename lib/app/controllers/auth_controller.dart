@@ -45,6 +45,7 @@ class AuthController extends GetxController {
       printLog("login: $token, $result");
       if (result) {
         LocalDBService().saveToLocalDB(Keys.token, token);
+        LocalDBService().saveToLocalDB(Keys.loginId, userNameController.text.toString());
         Get.offAllNamed(Routes.profileScreen);
       } else {
         showSnackBar(Strings.errorLogin);

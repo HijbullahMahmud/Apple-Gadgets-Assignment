@@ -8,4 +8,5 @@ class Strings {
   static const String errorLogin = "Error login";
   static const String profile = "Profile";
   static const String logout = "Logout";
+  static const String accessDenied = "Access denied, Please login again";
 }
