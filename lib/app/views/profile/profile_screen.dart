@@ -1,4 +1,6 @@
 import 'package:apple_gadgets_assignment/app/controllers/profile_controller.dart';
+import 'package:apple_gadgets_assignment/app/routes.dart';
+import 'package:apple_gadgets_assignment/app/views/widgets/custom_button.dart';
 import 'package:apple_gadgets_assignment/model/profile_response.dart';
 import 'package:apple_gadgets_assignment/model/user_profile.dart';
 import 'package:apple_gadgets_assignment/utils/dimensions.dart';
@@ -54,8 +56,7 @@ class ProfileScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
           children: [
             const CircleAvatar(
               child: Icon(Icons.person),
@@ -70,6 +71,12 @@ class ProfileScreen extends StatelessWidget {
             _profileTile(
                 "TotalTradesVolume: ${profile?.totalTradesVolume}", context),
             _profileTile("Balance: ${profile?.balance}", context),
+            const SizedBox(height: 50),
+            CustomButton(
+                onPressed: () {
+                  Get.toNamed(Routes.tradeListScreen);
+                },
+                label: const Text(Strings.seeTradeList))
           ],
         ),
       ),

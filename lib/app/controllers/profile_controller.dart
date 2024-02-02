@@ -9,9 +9,8 @@ import 'package:apple_gadgets_assignment/utils/strings.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController {
-
   Future<ProfileResponse?> getProfileAndPhoneNumber() async {
-    var apiList = [getUserProfile(), lastFourDigitsPhoneNumber()];
+    var apiList = [_getUserProfile(), _lastFourDigitsPhoneNumber()];
     var response = await Future.wait(apiList);
     var profile = response[0] as UserProfile?;
     var phoneNumber = response[1] as String?;
@@ -23,12 +22,12 @@ class ProfileController extends GetxController {
     return ProfileResponse(profile, phoneNumber);
   }
 
-  Future<UserProfile?> getUserProfile() async {
+  Future<UserProfile?> _getUserProfile() async {
     var userProfile = await NetworkService().userProfile();
     return userProfile;
   }
 
-  Future<String?> lastFourDigitsPhoneNumber() async {
+  Future<String?> _lastFourDigitsPhoneNumber() async {
     var phoneNumber = await NetworkService().lastFourDigitsPhoneNumber();
     return phoneNumber;
   }

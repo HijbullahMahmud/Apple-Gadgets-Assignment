@@ -9,4 +9,7 @@ class Strings {
   static const String profile = "Profile";
   static const String logout = "Logout";
   static const String accessDenied = "Access denied, Please login again";
+  static const String seeTradeList = "See Trade List";
+  static const String tradeList = "Trade List";
+
 }
