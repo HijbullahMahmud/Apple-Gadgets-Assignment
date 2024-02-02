@@ -29,8 +29,7 @@ class AuthScreen extends StatelessWidget {
               controller: controller.userNameController,
               isDense: true,
               maxLine: 1,
-              textInputFormatter: [DigitsOnlyFormatter()],
-              textInputType: TextInputType.number,
+              textInputType: TextInputType.text,
               textInputAction: TextInputAction.next,
             ),
             const SizedBox(height: Dimensions.defaultPadding),
@@ -76,7 +75,7 @@ class AuthScreen extends StatelessWidget {
           return CustomTextField(
             labelText: Strings.password,
             controller: controller.passwordController,
-            
+
             textInputType: TextInputType.visiblePassword,
             // prefixIcon: Icons.key,
             suffixIcon:
