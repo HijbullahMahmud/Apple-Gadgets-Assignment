@@ -6,4 +6,6 @@ class Strings {
   static const String password = "Password";
   static const String noInternet = "No Internet connection";
   static const String errorLogin = "Error login";
+  static const String profile = "Profile";
+  static const String logout = "Logout";
 }

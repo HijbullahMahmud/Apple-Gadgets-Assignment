@@ -76,6 +76,7 @@ class AuthScreen extends StatelessWidget {
           return CustomTextField(
             labelText: Strings.password,
             controller: controller.passwordController,
+            
             textInputType: TextInputType.visiblePassword,
             // prefixIcon: Icons.key,
             suffixIcon:
